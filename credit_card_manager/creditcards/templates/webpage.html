@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Credit Cards</h1>
+
+<ul>
+    {% for x in my_credit_cards %}
+      <li><a href="cardinfo/{{x.id}}">{{ x.bank_name }} {{ x.card_name }}</a>></li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
