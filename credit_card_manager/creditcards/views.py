@@ -9,7 +9,7 @@ from django.template import loader
 
 def creditcards(request):
     my_credit_cards = CreditCards.objects.all().values
-    template = loader.get_template('webpage.html')
+    template = loader.get_template('creditcards.html')
     context = {
         'my_credit_cards': my_credit_cards,
     }
@@ -22,3 +22,7 @@ def card_info(request, id):
         'credit_card': credit_card,
     }
     return HttpResponse(template.render(context, request))
+
+def main(request):
+    template = loader.get_template('main.html')
+    return HttpResponse(template.render())

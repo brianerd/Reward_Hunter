@@ -1,14 +1,21 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 
-<body>
+<body> -->
+{% extends "master.html"%}
+{% block title %}
+    {{credit_card.bank_name }} {{credit_card.card_name }}
+{% endblock %}
 
-<h1>{{credit_card.bank_name }} {{credit_card.card_name }}</h1>
-  
-<p>Dining: 3%</p>
-<p>Travel: 5%</p>
 
-<p>Back to <a href="/creditcards">My Cards</a></p>
+{% block content %}
+    <h2>{{credit_card.bank_name }} {{credit_card.card_name }}</h2>
+    <p>Dining: 3%</p>
+    <p>Travel: 5%</p>
 
-</body>
-</html>
+    <p>Back to <a href="/creditcards">My Cards</a></p>
+{% endblock %}
+
+
+<!-- </body>
+</html> -->
