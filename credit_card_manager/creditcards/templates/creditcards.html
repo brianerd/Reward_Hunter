@@ -5,11 +5,13 @@
 {% endblock %}
 
 {% block content %}
-  <h1>Your Credit Cards</h1>
+  <p><a href="/">Home</a></p>
 
+  <h1>Your Credit Cards</h1>
   <ul>
+      
       {% for x in my_credit_cards %}
-        <li><a href="cardinfo/{{x.id}}">{{ x.bank_name }} {{ x.card_name }}</a></li>
+        <li><a href="information/{{x.id}}">{{ x.bank_name }} {{ x.card_name }}</a></li>
       {% endfor %}
   </ul>
 {% endblock %}
