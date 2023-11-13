@@ -6,4 +6,3 @@ class Member_admin(admin.ModelAdmin):
     list_display = ("bank_name", "card_name")
 
 admin.site.register(CreditCards, Member_admin)
-
